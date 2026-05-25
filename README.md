@@ -6,12 +6,15 @@ Machine learning system for tennis match prediction and tournament simulation, c
 
 Demo
 
-Match Predictor
-demo_match_pred.jpeg
+### Match Predictor
+
+![Match Predictor](demo_match_pred.jpeg)
 
 
-Roland-Garros 2026 Simulation
-RG26_prediction.jpeg
+### Roland-Garros 2026 Simulation
+
+![Roland-Garros Simulation](RG26_prediction.jpeg)
+
 ⸻
 
 Overview
