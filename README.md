@@ -1,101 +1,99 @@
-CourtSense AI
+# CourtSense AI
 
-Machine learning system for tennis match prediction and tournament simulation, combining Elo ratings, historical retrieval, and agent-based analysis.
+Machine learning system for tennis match prediction and tournament simulation using XGBoost, Elo ratings, historical retrieval, and contextual analysis.
 
-⸻
+---
 
-Demo
+## Demo
 
 ### Match Predictor
 
-![Match Predictor](demo_match_pred.jpeg)
-
+<p align="center">
+  <img src="demo_match_pred.jpeg" width="900">
+</p>
 
 ### Roland-Garros 2026 Simulation
 
-![Roland-Garros Simulation](RG26_prediction.jpeg)
+<p align="center">
+  <img src="RG26_prediction.jpeg" width="900">
+</p>
 
-⸻
+---
 
-Overview
+## Overview
 
 CourtSense AI predicts ATP tennis matches using:
 
-* XGBoost classification
-* Dynamic Elo ratings
-* Surface-specific player strength
-* Historical match retrieval
-* Head-to-head analysis
-* Contextual agents
-* Roland-Garros tournament simulation
+- XGBoost classification
+- Dynamic Elo ratings
+- Surface-specific player strength
+- Historical match retrieval
+- Head-to-head analysis
+- Contextual reasoning agents
+- Roland-Garros tournament simulation
 
-The project combines statistical prediction with interpretable reasoning layers.
+The project combines probabilistic prediction with interpretable reasoning layers.
 
-⸻
+---
 
-Main Features
+## Main Features
 
-Match Prediction
+### Match Prediction
 
 Predicts:
-
-* match winner probability
-* confidence level
-* contextual analysis
+- match winner probability
+- confidence level
+- contextual evidence
 
 using:
+- ATP rankings
+- ranking points
+- Elo ratings
+- surface-specific Elo
+- recent form
+- fatigue indicators
+- serve/return profile
 
-* ATP rankings
-* ranking points
-* Elo ratings
-* surface-specific Elo
-* recent form
-* fatigue indicators
-* serve/return profile
+---
 
-⸻
+### Roland-Garros 26 Simulation
 
-Roland-Garros Simulation
+Uses the official Roland-Garros 2026 draw to simulate:
+- projected winners
+- round progression
+- tournament champion
 
-Uses the official Roland-Garros draw to simulate:
+---
 
-* projected winners
-* round progression
-* tournament champion
-
-⸻
-
-Retrieval System
+### Retrieval System
 
 Retrieves historically similar matches using:
+- cosine similarity
+- normalized feature vectors
+- contextual match-state similarity
 
-* cosine similarity
-* normalized feature vectors
-* contextual match-state similarity
+---
 
-⸻
-
-Agent-Based Analysis
+### Contextual Agent Analysis
 
 Specialized agents analyze:
-
-* head-to-head history
-* fatigue
-* matchup dynamics
-* similar historical matches
-* news context
-* uncertainty risk
+- head-to-head history
+- fatigue
+- matchup dynamics
+- similar historical matches
+- news context
+- uncertainty risk
 
 The final prediction combines:
+- ML probability
+- contextual evidence
+- agent reasoning
 
-* ML probability
-* contextual evidence
-* agent reasoning
+---
 
-⸻
+## Model Architecture
 
-Model Architecture
-
+```text
 Historical ATP data
         ↓
 Feature engineering
@@ -109,37 +107,38 @@ Historical retrieval
 Agent analysis
         ↓
 Final judgement
+```
 
-⸻
+---
 
-Core Features Used by XGBoost
+## Core Features Used by XGBoost
 
-* overall_elo_diff
-* surface_elo_diff
-* rank_diff
-* rank_points_diff
-* recent_win_rate_diff
-* age_diff
-* surface encoding
-* best-of format
+- `overall_elo_diff`
+- `surface_elo_diff`
+- `rank_diff`
+- `rank_points_diff`
+- `recent_win_rate_diff`
+- `age_diff`
+- surface encoding
+- best-of format
 
-⸻
+---
 
-Elo System
+## Elo System
 
 The project maintains:
-
-* overall Elo
-* clay Elo
-* hard Elo
-* grass Elo
+- overall Elo
+- clay Elo
+- hard Elo
+- grass Elo
 
 Each rating is updated dynamically from historical ATP matches.
 
-⸻
+---
 
-Project Structure
+## Project Structure
 
+```text
 courtsense-ai/
 │
 ├── app/
@@ -164,29 +163,45 @@ courtsense-ai/
 ├── model.pkl
 │
 └── README.md
+```
 
-⸻
+---
 
-Local Run
+## Local Run
 
 Install dependencies:
 
+```bash
 pip install -r requirements.txt
+```
 
 Run the application:
 
+```bash
 streamlit run app/streamlit_app.py
+```
 
-⸻
+---
 
-Future Improvements
-* bookmaker odds integration
-* richer retrieval system
-* improved fatigue modeling
-* probabilistic bracket simulation
+## Current Performance
 
-⸻
+| Metric | Value |
+|---|---|
+| Accuracy | ~66% |
+| ROC-AUC | ~0.73 |
+| Log Loss | ~0.61 |
 
-Author
+---
 
-Built by Georgii Melidi · 2026
+## Future Improvements
+
+- bookmaker odds integration
+- richer retrieval system
+- improved fatigue modeling
+- probabilistic bracket simulation
+
+---
+
+<p align="center">
+Built by <b>Georgii Melidi</b> · 2026
+</p>
